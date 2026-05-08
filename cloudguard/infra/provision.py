@@ -13,7 +13,7 @@ def provision():
     sns = boto3.client("sns", **CREDS)
     ddb = boto3.resource("dynamodb", **CREDS)
 
-    s3.create_bucket(Bucket="clwaitoudguard-artifacts")
+    s3.create_bucket(Bucket="cloudguard-artifacts")
     sqs.create_queue(QueueName="order-queue")
     sqs.create_queue(QueueName="inventory-queue")
     sqs.create_queue(QueueName="order-queue-dlq")
